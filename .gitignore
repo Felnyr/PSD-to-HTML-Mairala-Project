@@ -1,0 +1,16 @@
+
+# ignore all files in catalog node_modules/ and deeper (**)
+
+node_modules/**
+
+# no map files
+
+*.map
+
+# ignore folder sass-cache
+
+.sass-cache/**
+
+# ignore gulpfile.js
+
+/gulpfile.js
