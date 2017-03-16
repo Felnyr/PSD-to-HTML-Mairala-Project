@@ -524,22 +524,6 @@ header{
     line-height: 2;
     text-align: center;
   }
-  #pagers{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    .pager{
-      margin: 5px;  
-      border: 2px solid rgb(255, 255, 255);
-      border-radius: 50%;
-      background-color: rgba(123, 108, 99, 0);
-      width: 16px;
-      height: 15px;
-      &:hover{
-        background: #fff;  
-      }  
-    }
-  }
 }
 #ct-blog{
   #header-blog{
