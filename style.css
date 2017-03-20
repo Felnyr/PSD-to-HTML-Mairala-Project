@@ -249,6 +249,10 @@ header {
         display: flex;
         align-items: center;
         justify-content: center; }
+        #ct-skills #skills-circles .ct-circle .circle span {
+          position: absolute;
+          font-size: 16px;
+          color: white; }
       #ct-skills #skills-circles .ct-circle span {
         font-size: 16px;
         color: white; }
@@ -407,27 +411,30 @@ header {
         text-transform: uppercase;
         line-height: 2.143; }
 
-#ct-clients {
-  background: #1a1a1a;
-  height: 450px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 15px; }
-  #ct-clients h3 {
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 2;
-    text-align: center; }
-  #ct-clients p {
-    font-size: 18px;
-    color: #929292;
-    line-height: 2;
-    text-align: center; }
+.ct-sliders {
+  padding-left: 0;
+  padding-right: 0; }
+  .ct-sliders .ct-clients {
+    background: #1a1a1a;
+    height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px; }
+    .ct-sliders .ct-clients h3 {
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 2;
+      text-align: center; }
+    .ct-sliders .ct-clients p {
+      font-size: 18px;
+      color: #929292;
+      line-height: 2;
+      text-align: center; }
 
 #ct-blog #header-blog {
   display: flex;
@@ -570,7 +577,11 @@ header {
       margin: 20px auto 40px auto;
       padding: 5px;
       font-weight: bold;
-      border: 2px solid; }
+      border: 2px solid;
+      transition: 0.3s; }
+      .form-content form .form-submit:hover {
+        color: white;
+        background: black; }
 
 footer {
   background: #222222; }
