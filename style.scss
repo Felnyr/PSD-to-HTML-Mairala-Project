@@ -38,7 +38,7 @@ header{
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 2;
+  z-index: 1000;
   .logo{
     font-size: 47.644px;
     font-family: "OleoScript-regular";
@@ -66,6 +66,9 @@ header{
           color: rgb(255, 255, 255);
           width: 100%;
         }
+        .active{
+          border-bottom: 3px solid rgb(123, 108, 99);
+        }
         &:hover{
           a{
             border-bottom: 3px solid rgb(123, 108, 99);
@@ -90,7 +93,7 @@ header{
   }
 }
 .header-content{
-  height: 600px;
+  height: 670px;
   width:100%;
   display: flex;
   justify-content:center;
@@ -110,8 +113,8 @@ header{
 }
 
 
-.bg-header-downl{
-  max-width: 200px; 
+.header-download{
+  //max-width: 200px; 
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.1);
 	text-align: center;
@@ -139,7 +142,7 @@ header{
 
 //CONTENT//
 
-#ct-about-div {
+.ct-about{
   width:100%;
   min-height: 360px;
   display: flex;
@@ -147,20 +150,20 @@ header{
   flex-direction: column;
   align-items: center;
   text-align: center;
-	#ct-about-text1{
+	h2{
 		font-size: 40px;
   	color: $color1;
   	font-weight: bold;
   	text-transform: uppercase;
     margin-bottom: 0;
 	}
-  #ct-rect{
+  .ct-rect{
     background: $color1;
     height: 5px;
     width: 95px;
     margin: 40px;
   }
-  #ct-about-text2{   
+  span{   
     font-size: 18px;
     color: rgb(33, 33, 33);
     text-align: center;
@@ -319,10 +322,10 @@ header{
     }
   }
 }
-#ct-projects{
+.ct-projects{
   width: 100%;
   text-align: center;
-  #projects-heading{
+  .projects-heading{
     display: flex;
     justify-content:center;
     flex-direction: column;
@@ -336,7 +339,7 @@ header{
       text-transform: uppercase;
       margin-bottom: 0;
     }
-    #projects-rect{
+    .projects-rect{
       height: 5px;
       width: 75px;
       background: $color1;
@@ -453,13 +456,13 @@ header{
     }
   }
 }
-#ct-members{
+.ct-members{
   width: 100%;
   background: rgb(245, 245, 245);
   display: flex;
   flex-direction: column;
   align-items: center;
-  #members-heading{
+  .members-heading{
     display: flex;
     justify-content:center;
     flex-direction: column;
@@ -473,7 +476,7 @@ header{
       text-transform: uppercase;
       margin-bottom: 0;
     }
-    #team-rect{
+    .ct-rect{
       height: 5px;
       width: 95px;
       background: $color1;
@@ -537,8 +540,8 @@ header{
     }
   }
 }
-#ct-blog{
-  #header-blog{
+.ct-blog{
+  .header-blog{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -554,7 +557,7 @@ header{
       line-height: 1.198;
       margin-bottom: 0;
     }
-    #rect-blog{
+    .ct-rect{
       height: 5px;
       width: 95px;
       background: $color1;
@@ -642,7 +645,7 @@ header{
   }
 }
 
-.form-content{
+.ct-contact{
   background: rgb(245, 245, 245);
   width: 100%;
   text-align: center;  
@@ -842,6 +845,7 @@ footer{
     .logo{
       display: inline-block;
       font-size: 40px;
+      margin-bottom: 18px;
     }
     .menu-btn{
       display: none;
@@ -870,11 +874,11 @@ footer{
   
   //HEADER//
   .header-content{
-    #header-text1{
-      font-size: 20px;
+    .header-text1{
+      font-size: 24px;
     }
     .header-text2{
-      font-size: 36px;
+      font-size: 38px;
     }  
   }
   

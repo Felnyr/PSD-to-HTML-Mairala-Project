@@ -29,7 +29,7 @@ header {
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 2; }
+  z-index: 1000; }
   .nav-top .logo {
     font-size: 47.644px;
     font-family: "OleoScript-regular";
@@ -54,6 +54,8 @@ header {
           text-decoration: none;
           color: white;
           width: 100%; }
+        .nav-top .menu-btn ul li .active {
+          border-bottom: 3px solid #7b6c63; }
         .nav-top .menu-btn ul li:hover a {
           border-bottom: 3px solid #7b6c63; }
   .nav-top .top-menu-cursor {
@@ -69,7 +71,7 @@ header {
         border-radius: 2px; }
 
 .header-content {
-  height: 600px;
+  height: 670px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -84,14 +86,13 @@ header {
     .header-content .header-text2 strong {
       color: #7b6c63; }
 
-.bg-header-downl {
-  max-width: 200px;
+.header-download {
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.1);
   text-align: center;
   margin-top: 30px;
   padding: 0; }
-  .bg-header-downl a {
+  .header-download a {
     display: block;
     padding: 15px 20px;
     height: 100%;
@@ -101,12 +102,12 @@ header {
     cursor: pointer;
     text-decoration: none;
     transition: 0.3s; }
-    .bg-header-downl a:hover {
+    .header-download a:hover {
       background: rgba(255, 255, 255, 0.3); }
-    .bg-header-downl a i {
+    .header-download a i {
       margin-left: 15px; }
 
-#ct-about-div {
+.ct-about {
   width: 100%;
   min-height: 360px;
   display: flex;
@@ -114,18 +115,18 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center; }
-  #ct-about-div #ct-about-text1 {
+  .ct-about h2 {
     font-size: 40px;
     color: #7b6c63;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 0; }
-  #ct-about-div #ct-rect {
+  .ct-about .ct-rect {
     background: #7b6c63;
     height: 5px;
     width: 95px;
     margin: 40px; }
-  #ct-about-div #ct-about-text2 {
+  .ct-about span {
     font-size: 18px;
     color: #212121;
     text-align: center; }
@@ -257,47 +258,47 @@ header {
         font-size: 16px;
         color: white; }
 
-#ct-projects {
+.ct-projects {
   width: 100%;
   text-align: center; }
-  #ct-projects #projects-heading {
+  .ct-projects .projects-heading {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     min-height: 360px;
     padding: 0 15px; }
-    #ct-projects #projects-heading h2 {
+    .ct-projects .projects-heading h2 {
       font-size: 40px;
       color: #7b6c63;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 0; }
-    #ct-projects #projects-heading #projects-rect {
+    .ct-projects .projects-heading .projects-rect {
       height: 5px;
       width: 75px;
       background: #7b6c63;
       margin: 40px auto; }
-    #ct-projects #projects-heading span {
+    .ct-projects .projects-heading span {
       font-size: 18px;
       color: #212121;
       line-height: 1.67;
       text-align: center; }
-  #ct-projects .projects-images div {
+  .ct-projects .projects-images div {
     background: rgba(0, 0, 0, 0.8);
     padding: 0;
     margin: 0; }
-    #ct-projects .projects-images div img {
+    .ct-projects .projects-images div img {
       width: 100%; }
-    #ct-projects .projects-images div .caption {
+    .ct-projects .projects-images div .caption {
       display: none; }
-      #ct-projects .projects-images div .caption h3 {
+      .ct-projects .projects-images div .caption h3 {
         display: none; }
-      #ct-projects .projects-images div .caption .img-rect {
+      .ct-projects .projects-images div .caption .img-rect {
         display: none; }
-      #ct-projects .projects-images div .caption span {
+      .ct-projects .projects-images div .caption span {
         display: none; }
-    #ct-projects .projects-images div :hover .caption {
+    .ct-projects .projects-images div :hover .caption {
       position: absolute;
       top: 5%;
       left: 5%;
@@ -308,104 +309,104 @@ header {
       align-items: center;
       flex-direction: column;
       cursor: pointer; }
-      #ct-projects .projects-images div :hover .caption h3 {
+      .ct-projects .projects-images div :hover .caption h3 {
         font-size: 18px;
         color: white;
         text-transform: uppercase;
         margin: 0;
         display: block; }
-      #ct-projects .projects-images div :hover .caption .img-rect {
+      .ct-projects .projects-images div :hover .caption .img-rect {
         display: block;
         margin: 20px 0;
         height: 5px;
         width: 30px;
         background-color: white; }
-      #ct-projects .projects-images div :hover .caption span {
+      .ct-projects .projects-images div :hover .caption span {
         font-size: 14px;
         color: white;
         text-transform: uppercase;
         letter-spacing: 2px;
         display: block; }
-  #ct-projects #projects-twitter {
+  .ct-projects #projects-twitter {
     height: 300px;
     width: 100%;
     background: #1a1a1a;
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    #ct-projects #projects-twitter h3 {
+    .ct-projects #projects-twitter h3 {
       font-size: 24px;
       color: white;
       font-weight: bold;
       text-transform: uppercase; }
-    #ct-projects #projects-twitter span {
+    .ct-projects #projects-twitter span {
       font-size: 18px;
       font-family: "Raleway";
       color: white; }
-  #ct-projects #projects-see {
+  .ct-projects #projects-see {
     height: 200px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center; }
-    #ct-projects #projects-see #btn-see {
+    .ct-projects #projects-see #btn-see {
       border: 2px solid;
       border-radius: 3px;
       font-size: 16px;
       text-transform: uppercase;
       width: 150px; }
-      #ct-projects #projects-see #btn-see a {
+      .ct-projects #projects-see #btn-see a {
         display: block;
         text-decoration: none;
         color: black;
         padding: 10px 30px;
         width: 100%;
         transition: 0.3s; }
-        #ct-projects #projects-see #btn-see a:hover {
+        .ct-projects #projects-see #btn-see a:hover {
           background: black;
           color: white; }
 
-#ct-members {
+.ct-members {
   width: 100%;
   background: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center; }
-  #ct-members #members-heading {
+  .ct-members .members-heading {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
     min-height: 360px; }
-    #ct-members #members-heading h2 {
+    .ct-members .members-heading h2 {
       font-size: 40px;
       color: #7b6c63;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 0; }
-    #ct-members #members-heading #team-rect {
+    .ct-members .members-heading .ct-rect {
       height: 5px;
       width: 95px;
       background: #7b6c63;
       margin: 40px; }
-    #ct-members #members-heading p {
+    .ct-members .members-heading p {
       font-size: 18px;
       color: #212121; }
-  #ct-members #team-images-boxes .img-box {
+  .ct-members #team-images-boxes .img-box {
     text-align: center; }
-    #ct-members #team-images-boxes .img-box .img-caption {
+    .ct-members #team-images-boxes .img-box .img-caption {
       width: 100%;
       height: auto;
       border: 3px solid #e4e4e4;
       background: rgba(48, 48, 48, 0);
       margin: 20px 0; }
-      #ct-members #team-images-boxes .img-box .img-caption h4 {
+      .ct-members #team-images-boxes .img-box .img-caption h4 {
         font-size: 24px;
         text-transform: uppercase;
         line-height: 1.25;
         margin-bottom: 0; }
-      #ct-members #team-images-boxes .img-box .img-caption span {
+      .ct-members #team-images-boxes .img-box .img-caption span {
         font-size: 14px;
         font-family: "OratorStd";
         text-transform: uppercase;
@@ -436,7 +437,7 @@ header {
       line-height: 2;
       text-align: center; }
 
-#ct-blog #header-blog {
+.ct-blog .header-blog {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,19 +445,19 @@ header {
   min-height: 350px;
   width: 100%;
   padding: 0 15px; }
-  #ct-blog #header-blog h2 {
+  .ct-blog .header-blog h2 {
     font-size: 40px;
     color: #7b6c63;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.198;
     margin-bottom: 0; }
-  #ct-blog #header-blog #rect-blog {
+  .ct-blog .header-blog .ct-rect {
     height: 5px;
     width: 95px;
     background: #7b6c63;
     margin: 40px; }
-  #ct-blog #header-blog p {
+  .ct-blog .header-blog p {
     font-size: 18px;
     color: #212121;
     line-height: 1.67;
@@ -521,11 +522,11 @@ header {
         line-height: 1.875;
         text-align: left; }
 
-.form-content {
+.ct-contact {
   background: whitesmoke;
   width: 100%;
   text-align: center; }
-  .form-content h2 {
+  .ct-contact h2 {
     font-size: 40px;
     color: #7b6c63;
     font-weight: bold;
@@ -533,34 +534,34 @@ header {
     line-height: 1.198;
     text-align: center;
     margin: 40px 0; }
-  .form-content form {
+  .ct-contact form {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
     margin: 0 auto;
     justify-content: space-between;
     min-height: 100px; }
-    .form-content form .form-name {
+    .ct-contact form .form-name {
       border: 0;
       background: transparent;
       width: 45%;
       border-top: 3px solid #242424;
       margin: 0;
       height: 50px; }
-      .form-content form .form-name:placeholder {
+      .ct-contact form .form-name:placeholder {
         color: red; }
-      .form-content form .form-name:focus {
+      .ct-contact form .form-name:focus {
         outline: none; }
-    .form-content form .form-email {
+    .ct-contact form .form-email {
       border: 0;
       background: transparent;
       width: 45%;
       border-top: 3px solid #242424;
       margin: 0;
       height: 50px; }
-      .form-content form .form-email:focus {
+      .ct-contact form .form-email:focus {
         outline: none; }
-    .form-content form .form-message {
+    .ct-contact form .form-message {
       clear: both;
       width: 100%;
       height: 120px;
@@ -569,9 +570,9 @@ header {
       border-top: 3px solid #242424;
       border-bottom: 1px solid #242424;
       margin: 0; }
-      .form-content form .form-message:focus {
+      .ct-contact form .form-message:focus {
         outline: none; }
-    .form-content form .form-submit {
+    .ct-contact form .form-submit {
       background: transparent;
       width: 150px;
       margin: 20px auto 40px auto;
@@ -579,7 +580,7 @@ header {
       font-weight: bold;
       border: 2px solid;
       transition: 0.3s; }
-      .form-content form .form-submit:hover {
+      .ct-contact form .form-submit:hover {
         color: white;
         background: black; }
 
@@ -677,7 +678,8 @@ footer {
     display: inline-block; }
     .nav-top .logo {
       display: inline-block;
-      font-size: 40px; }
+      font-size: 40px;
+      margin-bottom: 18px; }
     .nav-top .menu-btn {
       display: none; }
       .nav-top .menu-btn li {
@@ -693,10 +695,10 @@ footer {
     .responsive .menu-btn li {
       height: 50px;
       width: 100%; }
-  .header-content #header-text1 {
-    font-size: 20px; }
+  .header-content .header-text1 {
+    font-size: 24px; }
   .header-content .header-text2 {
-    font-size: 36px; }
+    font-size: 38px; }
   #blog-posts {
     display: flex;
     flex-direction: column;

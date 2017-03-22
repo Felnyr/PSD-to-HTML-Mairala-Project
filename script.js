@@ -1,21 +1,77 @@
 $(document).ready(function(){
-    $('.logo').on('click', function(){
-      $('html, body').animate({ scrollTop: 0 }, 'slow');
-    });
   
-    $('.btn-mobile').on('click',function(){
-      if($('.nav-top').hasClass('responsive')){
-        $('.nav-top').removeClass('responsive')
+(function() {   
+const navH = 82;
+var about = $('.ct-about').offset().top-navH;
+console.log(about);
+var projects = $('.ct-projects').offset().top-navH;
+console.log(projects);
+var members = $('.ct-members').offset().top-navH;
+console.log(members);
+var blog = $('.ct-blog').offset().top-navH;
+console.log(blog);
+var contact = $('.ct-contact').offset().top-navH;
+console.log(contact)
+  
+  $('.logo, .menu-btn li:nth-child(1)').on('click', function(){
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+  });
+  $('.menu-btn li:nth-child(2)').on('click', function(){
+    $('html, body').animate({ scrollTop: about }, 'slow');
+  });
+  $('.menu-btn li:nth-child(3)').on('click', function(){
+    $('html, body').animate({ scrollTop: projects }, 'slow');
+  });
+  $('.menu-btn li:nth-child(4)').on('click', function(){
+    $('html, body').animate({ scrollTop: members }, 'slow');
+  });
+  $('.menu-btn li:nth-child(5)').on('click', function(){
+    $('html, body').animate({ scrollTop: blog }, 'slow');
+  });
+  $('.menu-btn li:nth-child(6)').on('click', function(){
+    $('html, body').animate({ scrollTop: contact }, 'slow');
+  });
 
-      }else{
-        $('.nav-top').addClass('responsive')
-      }
-    });
+
+  $('.btn-mobile').on('click',function(){
+    if($('.nav-top').hasClass('responsive')){
+      $('.nav-top').removeClass('responsive')
+
+    }else{
+      $('.nav-top').addClass('responsive')
+    }
+  });
+
+  $('.carousel').carousel({
+    interval: 2000
+  })
   
-    $('.carousel').carousel({
-      interval: 2000
-    })
-    
+//active scroll
+
+$(document).on('scroll', function(){
+  var scroll = $(this).scrollTop()
+  //console.log(scroll)
+  if(scroll<about){
+    $('.menu-btn li a').removeClass('active')
+    $('.menu-btn li:nth-child(1) a').addClass('active')
+  }else if(scroll>=about&&scroll<projects){
+    $('.menu-btn li a').removeClass('active')
+    $('.menu-btn li:nth-child(2) a').addClass('active')
+  }else if(scroll>=projects&&scroll<members){
+    $('.menu-btn li a').removeClass('active')
+    $('.menu-btn li:nth-child(3) a').addClass('active')
+  }else if(scroll>=members&&scroll<blog){
+    $('.menu-btn li a').removeClass('active')
+    $('.menu-btn li:nth-child(4) a').addClass('active')
+  }else if(scroll>=blog&&scroll<contact){
+    $('.menu-btn li a').removeClass('active')
+    $('.menu-btn li:nth-child(5) a').addClass('active')
+  }else if(scroll>=contact){
+    $('.menu-btn li a').removeClass('active')
+    $('.menu-btn li:nth-child(6) a').addClass('active')
+  }
+});
+  
 function draw1(){
   var ctx = document.getElementById('MarkCanvas').getContext('2d');
   MarkCanvas.width = MarkCanvas.height = 120;
@@ -62,7 +118,8 @@ function drawCanvas(){
   draw3();
   draw4();
   draw5();
-}
-window.onload = drawCanvas();
+}  
 
+window.onload = drawCanvas();
+})();
 });
