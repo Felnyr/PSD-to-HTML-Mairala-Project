@@ -1,35 +1,45 @@
 $(document).ready(function(){
   
-(function() {   
+//(function() {
 const navH = 82;
 var about = $('.ct-about').offset().top-navH;
-console.log(about);
-var projects = $('.ct-projects').offset().top-navH;
-console.log(projects);
+var projects =$('.ct-projects').offset().top-navH;
 var members = $('.ct-members').offset().top-navH;
-console.log(members);
 var blog = $('.ct-blog').offset().top-navH;
-console.log(blog);
 var contact = $('.ct-contact').offset().top-navH;
-console.log(contact)
+
+window.addEventListener("resize", function(){
+  
+  about = $('.ct-about').offset().top-navH;
+  //console.log(about);
+  projects = $('.ct-projects').offset().top-navH;
+  //console.log(projects);
+  members = $('.ct-members').offset().top-navH;
+  //console.log(members);
+  blog = $('.ct-blog').offset().top-navH;
+  //console.log(blog);
+  contact = $('.ct-contact').offset().top-navH;
+  //console.log(contact)  
+});  
+
   
   $('.logo, .menu-btn li:nth-child(1)').on('click', function(){
     $('html, body').animate({ scrollTop: 0 }, 'slow');
   });
   $('.menu-btn li:nth-child(2)').on('click', function(){
-    $('html, body').animate({ scrollTop: about }, 'slow');
+    $('html, body').animate({ scrollTop: about+1 }, 'slow');
   });
   $('.menu-btn li:nth-child(3)').on('click', function(){
-    $('html, body').animate({ scrollTop: projects }, 'slow');
+    $('html, body').animate({ scrollTop: projects+1 }, 'slow');
   });
   $('.menu-btn li:nth-child(4)').on('click', function(){
-    $('html, body').animate({ scrollTop: members }, 'slow');
+    $('html, body').animate({ scrollTop: members+1 }, 'slow');
   });
   $('.menu-btn li:nth-child(5)').on('click', function(){
-    $('html, body').animate({ scrollTop: blog }, 'slow');
+    $('html, body').animate({ scrollTop: blog+1 }, 'slow');
   });
   $('.menu-btn li:nth-child(6)').on('click', function(){
-    $('html, body').animate({ scrollTop: contact }, 'slow');
+    $('html, body').animate({ scrollTop: contact+1 }, 'slow');
   });
 
 
@@ -118,8 +128,28 @@ function drawCanvas(){
   draw3();
   draw4();
   draw5();
-}  
-
+} 
+  
 window.onload = drawCanvas();
-})();
+//})();
 });
+
+
+
+
+//script for skills animation
+
+/*
+
+function count(){  
+  var a = 0;
+  setInterval(function(){
+    if(a<200){
+     a++
+     console.log(a) 
+    }
+  },30);
+}
+count()
+
+*/
