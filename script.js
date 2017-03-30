@@ -1,6 +1,5 @@
-$(document).ready(function(){
-  
-//(function() {
+window.onload = function(){
+
 const navH = 82;
 var about = $('.ct-about').offset().top-navH;
 var projects =$('.ct-projects').offset().top-navH;
@@ -131,11 +130,8 @@ function drawCanvas(){
 } 
   
 window.onload = drawCanvas();
-//})();
-});
 
-
-
+}
 
 //script for skills animation
 
